@@ -1,0 +1,15 @@
+.pageTitle {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: 0.75rem;
+
+  h2 {
+    white-space: nowrap;
+    margin: 0;
+  }
+}
