@@ -1,0 +1,1 @@
+import{j as e}from"./index-YVvcq5W7.js";const t="_pageTitle_xiui1_1",s={pageTitle:t};function a(){return e.jsxs("div",{className:s.pageTitle,children:[e.jsx("h2",{children:"21.05.25"}),e.jsx("h2",{children:"Test Project Untitled 01"})]})}export{a as default};
