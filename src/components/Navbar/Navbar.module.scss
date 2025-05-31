@@ -27,11 +27,12 @@
 }
 
 .link {
+  // font-family: 'Baltica';
+
   color: #ffffff99;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
-  font-family: 'Roboto Mono', monospace;
   cursor: pointer;
 
   &:hover {

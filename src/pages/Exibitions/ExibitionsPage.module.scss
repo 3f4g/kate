@@ -1,0 +1,118 @@
+// .exibitionsPage {
+//   padding-top: 50px;
+
+//   .content {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 15px;
+
+//     .block {
+//       display: flex;
+//       gap: 30px;
+
+//       .descr {
+//         display: flex;
+//         gap: 30px;
+//       }
+//     }
+//   }
+// }
+
+
+
+// .exibitionsPage {
+//   padding-top: 50px;
+
+//   .content {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 34px;
+
+//     .block {
+//       display: flex;
+//       gap: 24px;
+//       align-items: flex-start;
+
+//       .exibitionImage {
+//         max-width: 600px;
+//         width: 100%;
+//         height: auto;
+//         border-radius: 8px;
+//         object-fit: cover;
+//       }
+
+//       .descr {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 12px;
+//         font-size: 14px;
+//         line-height: 1.5;
+//         max-width: 600px;
+//       }
+
+//       @media (max-width: 600px) {
+//         flex-direction: column-reverse;
+//         .exibitionImage {
+//           max-width: 100%;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// a {
+//   color: rgb(177, 177, 249);
+//   text-decoration: none;
+
+//   &:hover {
+//     text-decoration: underline; // по желанию — добавлять подчёркивание при ховере
+//   }
+// }
+
+
+
+
+.exibitionsPage {
+  padding-top: 50px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+
+    .block {
+      display: flex;
+      gap: 34px;
+      align-items: flex-start;
+
+      .exibitionImage {
+        width: 100%;
+        min-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .descr {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 800px) {
+        flex-direction: column-reverse;
+
+        .exibitionImage {
+          max-width: 100%;
+          min-width: unset; 
+        }
+      }
+    }
+  }
+}
+
+.title{
+    font-size: 20px;
+}

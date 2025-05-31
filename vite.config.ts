@@ -1,8 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { visualizer } from "rollup-plugin-visualizer";
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: 'kate',
-  plugins: [react()],
-})
+  base: "kate",
+  plugins: [
+    react(),
+    visualizer({
+      open: true,
+      filename: "bundle-report.html",
+      gzipSize: true,
+      brotliSize: true,
+    }),
+  ],
+});

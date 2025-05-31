@@ -1,0 +1,60 @@
+.primary {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+
+  .primaryImg {
+    max-width: 100vw;
+    border-radius: 8px;
+  }
+}
+
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
+
+.item {
+  cursor: pointer;
+  margin-bottom: 16px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.fullscreenImage {
+  max-width: 95vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
+  object-fit: contain;
+}

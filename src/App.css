@@ -1,11 +1,22 @@
-body, #root {
+body,
+#root {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-
-  
+  width: 100%;
 }
 
 .app {
-  padding-top: 50px; /* высота навбара + небольшой отступ */
+  height: 100%;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  padding: 0 15px;
 }

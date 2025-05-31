@@ -3,20 +3,24 @@ import { Suspense, lazy } from "react";
 import Navbar from "./components/Navbar/Navbar";
 
 const MainPage = lazy(() => import("./pages/Main/MainPage"));
-const ProjectPage = lazy(() => import("./pages/Project/ProjectPage"));
+const ExibitionsPage = lazy(() => import("./pages/Exibitions/ExibitionsPage"));
 const ProjectPageView = lazy(() => import("./pages/ProjectView/ProjectView"));
 
 export default function Router() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/kate" element={<MainPage />} />
-          <Route path="kate/projects" element={<ProjectPage />} />
-          <Route path="kate/projects/:id" element={<ProjectPageView />} />
-        </Routes>
-      </Suspense>
+      <div className="layout">
+        <Navbar />
+        <div className="content">
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/kate" element={<MainPage />} />
+              <Route path="kate/projects/:id" element={<ProjectPageView />} />
+              <Route path="kate/exibitions" element={<ExibitionsPage />} />
+            </Routes>
+          </Suspense>
+        </div>
+      </div>
     </BrowserRouter>
   );
 }

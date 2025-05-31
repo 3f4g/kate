@@ -13,3 +13,46 @@
     margin: 0;
   }
 }
+
+.pageWrapper {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.card {
+  background-color: none;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  span {
+    font-size: 14px;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .line {
+    border-bottom: 1px solid #fff;
+  }
+}

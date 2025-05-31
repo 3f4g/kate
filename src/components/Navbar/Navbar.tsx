@@ -7,13 +7,16 @@ export default function Navbar() {
   const [showInfoBlock, setShowInfoBlock] = useState<boolean>(false);
   return (
     <>
-      <InfoBlock isVisible={showInfoBlock} setShow={() => setShowInfoBlock(false)}/>
+      <InfoBlock
+        isVisible={showInfoBlock}
+        setShow={() => setShowInfoBlock(false)}
+      />
       <div className={classes.navbar}>
         <Link to="/kate" className={classes.link}>
-          Main Page
-        </Link>
-        <Link to="/kate/projects" className={classes.link}>
           Projects
+        </Link>
+        <Link to="/kate/exibitions" className={classes.link}>
+          Exibitions
         </Link>
         <span className={classes.link} onClick={() => setShowInfoBlock(true)}>
           Info
