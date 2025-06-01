@@ -42,11 +42,11 @@ export default function ExibitionsPage() {
                 {exibition.link && (
                   <a
                     href={exibition.link}
-                    className="link"
+                    className={classes.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    link
+                    See more...
                   </a>
                 )}
               </div>

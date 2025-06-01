@@ -27,8 +27,12 @@ export default function MainPage() {
   return (
     <div className={classes.pageWrapper}>
       <div className={classes.pageTitle}>
-        <h2>21.05.25</h2>
-        <h2>Test Project Untitled 01</h2>
+        <span>
+          I am Ekaterina Azovskaya, a London-based product designer. My research
+          is based on observing various phenomena usually invisible to the eye.
+          My focus is on material storytelling. I am currently working across
+          products, photography, and ceramics. Nice to meet you.
+        </span>
       </div>
 
       <div className={classes.cardWrapper}>

@@ -1,17 +1,8 @@
 .pageTitle {
-  position: fixed;
-  bottom: 16px;
-  left: 16px;
-
-  display: flex;
-  flex-direction: column;
-
-  font-size: 0.75rem;
-
-  h2 {
-    white-space: nowrap;
-    margin: 0;
-  }
+  margin-top: 70px;
+  // border: 1px solid red;
+  padding: 3px;
+  font-size: 20px;
 }
 
 .pageWrapper {
@@ -37,13 +28,14 @@
   cursor: pointer;
 
   &:hover {
-    transform: translateY(-4px);
+    transform: rotate(1deg);
   }
 
   img {
     width: 100%;
-    height: 180px;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
+    display: block;
   }
 
   span {
