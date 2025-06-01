@@ -18,5 +18,5 @@ export type TExibition = {
   link?: string;
 };
 
-// export const APP_URL = "https://kate-api-production.up.railway.app";
-export const APP_URL = "http://localhost:3000";
+export const APP_URL = "https://kate-api-production.up.railway.app";
+// export const APP_URL = "http://localhost:3000";
