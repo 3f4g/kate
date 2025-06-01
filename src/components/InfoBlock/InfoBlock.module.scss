@@ -58,6 +58,11 @@
   display: flex;
   gap: 15px;
 
+  span {
+    display: flex;
+    padding-top: 3px;
+  }
+
   a {
     color: #ffffff99;
     transition: color 0.3s;

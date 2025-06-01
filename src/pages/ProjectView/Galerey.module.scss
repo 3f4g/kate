@@ -1,9 +1,9 @@
 .primary {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 16px;
   margin-bottom: 15px;
-  margin-top: 30px;
+  margin-top: 16px;
 
   .primaryImg {
     max-width: 100vw;
@@ -33,6 +33,13 @@
   }
 }
 
+.primaryWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
 .overlay {
   position: fixed;
   top: 0;
@@ -57,4 +64,38 @@
   border-radius: 12px;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
   object-fit: contain;
+}
+
+.verticalWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.verticalItem {
+  flex: 1 1 calc(33.333% - 10.66px);
+  min-width: 200px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .verticalItem {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.someWrapper {
+  display: flex;
+  flex-direction: row;
+  // gap: 15px;
+  width: 100%;
 }

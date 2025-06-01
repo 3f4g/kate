@@ -3,9 +3,11 @@ export type TProject = {
   title: string;
   shortDescription: string;
   previewImage: string;
-  fullDescription: string;
+  fullDescription: string[];
   primaryImages: string[];
   secondaryImages: string[];
+  vertical: string[];
+  last: string[];
 };
 
 export type TExibition = {
@@ -16,4 +18,5 @@ export type TExibition = {
   link?: string;
 };
 
-export const APP_URL = "https://kate-api-production.up.railway.app";
+// export const APP_URL = "https://kate-api-production.up.railway.app";
+export const APP_URL = "http://localhost:3000";

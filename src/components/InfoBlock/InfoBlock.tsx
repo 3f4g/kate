@@ -84,6 +84,8 @@ export default function InfoBlock({ setShow, isVisible }: IInfoBlock) {
                   >
                     <FaTelegramPlane />
                   </a>
+
+                  <span>+447916281462</span>
                 </div>
               </div>
             </div>

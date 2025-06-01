@@ -1,10 +1,19 @@
 .exibitionsPage {
-  padding-top: 50px;
+  padding-top: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 50px;
+  }
+
+  h1 {
+    color: #d8d8d8;
+  }
 
   .content {
     display: flex;
     flex-direction: column;
     gap: 34px;
+    color: #d8d8d8;
 
     .block {
       display: flex;
@@ -32,15 +41,15 @@
 
         .exibitionImage {
           max-width: 100%;
-          min-width: unset; 
+          min-width: unset;
         }
       }
     }
   }
 }
 
-.title{
-    font-size: 20px;
+.title {
+  font-size: 20px;
 }
 
 .link {
@@ -50,7 +59,7 @@
   text-underline-offset: 4px;
 
   &:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
   }
 
   &:visited {

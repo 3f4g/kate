@@ -38,7 +38,9 @@ export default function ExibitionsPage() {
               />
               <div className={classes.descr}>
                 <span className={classes.title}>{exibition.title}</span>
-                <span>{exibition.description}</span>
+                {/* <span>{exibition.description}</span> */}
+
+                <span>10293 Rfrjt nj yfpdfybt</span>
                 {exibition.link && (
                   <a
                     href={exibition.link}

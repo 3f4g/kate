@@ -1,10 +1,10 @@
 .navbar {
   position: fixed;
-  top: 8px;
-  left: 15px;
-  right: 15px;
-  width: auto;
-  // padding: 15px 10px;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 90px);
+  max-width: 1400px;
 
   padding-left: 5px;
   padding-right: 15px;
@@ -28,44 +28,43 @@
   @media (max-width: 600px) {
     left: 0;
     right: 0;
+    transform: none;
     border-radius: 0;
     padding: 15px 30px;
+    top: 0px;
+    width: 100%;
   }
 }
 
-
-.links{
+.links {
   display: flex;
   gap: 12px;
 
   .link {
-    // font-family: 'Baltica';
-  
-    color: #ffffff99;
+    color: #d8d8d8;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
     cursor: pointer;
-  
+
     &:hover {
-      color: #ffffffd5;
+      color: #ffffffec;
     }
   }
 }
 
-
-.logoBlock{
+.logoBlock {
   display: flex;
   gap: 10px;
   align-items: center;
   cursor: pointer;
 
-  img{
+  img {
     height: 38px;
   }
 
-  .name{
+  .name {
     font-weight: 600;
-    color: rgb(230, 64, 64);
+    color: #fff;
   }
 }

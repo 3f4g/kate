@@ -6,11 +6,15 @@ import { APP_URL } from "../../types";
 interface GalleryProps {
   primaryImages?: string[];
   secondaryImages?: string[];
+  vertical?: string[];
+  last?: string[];
 }
 
 export default function Gallery({
   primaryImages,
   secondaryImages,
+  vertical,
+  last,
 }: GalleryProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 600);
@@ -30,35 +34,75 @@ export default function Gallery({
     }
   };
 
+  const getVertical = () => {
+    return (
+      <div className={classes.verticalWrapper}>
+        {vertical!.map((img, index) => (
+          <div
+            key={index}
+            className={classes.verticalItem}
+            onClick={() => {
+              if (!isMobile) setSelectedImage(img);
+            }}
+          >
+            <img src={`${APP_URL}${img}`} alt={`Image ${index}`} />
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <>
-      {primaryImages && (
-        <div className={classes.primary}>
-          {primaryImages.map((img, index) => (
-            <img
-              src={`${APP_URL}${img}`}
-              alt={`Image ${index}`}
-              className={classes.primaryImg}
-            />
-          ))}
-        </div>
-      )}
+    
+        {primaryImages && (
+          <div className={classes.primary}>
+            {primaryImages.map((img, index) => (
+              <img
+                src={`${APP_URL}${img}`}
+                alt={`Image ${index}`}
+                className={classes.primaryImg}
+              />
+            ))}
+          </div>
+        )}
 
-      {secondaryImages && (
-        <div className={classes.masonry}>
-          {secondaryImages.map((img, index) => (
-            <div
-              key={index}
-              className={classes.item}
-              onClick={() => {
-                if (!isMobile) setSelectedImage(img);
-              }}
-            >
-              <img src={`${APP_URL}${img}`} alt={`Image ${index}`} />
-            </div>
-          ))}
-        </div>
-      )}
+
+      <div className={classes.someWrapper} style={{ gap: `${vertical && vertical.length >= 1 ? "16px" : "0px" }`}}>
+        {vertical && vertical.length < 2 && getVertical()}
+
+        {secondaryImages && (
+          <div className={classes.masonry}>
+            {secondaryImages.map((img, index) => (
+              <div
+                key={index}
+                className={classes.item}
+                onClick={() => {
+                  if (!isMobile) setSelectedImage(img);
+                }}
+              >
+                <img src={`${APP_URL}${img}`} alt={`Image ${index}`} />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {vertical && vertical.length > 1 && getVertical()}
+
+      
+        {last && (
+          <div className={classes.primary}>
+            {last.map((img, index) => (
+              <img
+                src={`${APP_URL}${img}`}
+                alt={`Image ${index}`}
+                className={classes.primaryImg}
+              />
+            ))}
+          </div>
+        )}
+   
 
       <AnimatePresence>
         {selectedImage && (

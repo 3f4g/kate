@@ -31,8 +31,9 @@ export default function MainPage() {
           I am Ekaterina Azovskaya, a London-based product designer. My research
           is based on observing various phenomena usually invisible to the eye.
           My focus is on material storytelling. I am currently working across
-          products, photography, and ceramics. Nice to meet you.
+          products, photography, and ceramics.
         </span>
+        <span>Nice to meet you.</span>
       </div>
 
       <div className={classes.cardWrapper}>
@@ -48,7 +49,7 @@ export default function MainPage() {
                 src={`${APP_URL}${project.previewImage}`}
                 alt="Project Image"
               />
-              <span>{project.shortDescription}</span>
+              <span>{project.title}</span>
               <div className={classes.line} />
             </div>
           ))}

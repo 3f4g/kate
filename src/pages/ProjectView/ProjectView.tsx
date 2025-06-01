@@ -36,14 +36,20 @@ export default function ProjectViewPage() {
       <div className={classes.topBlock}>
         <div className={classes.header}>
           <h1 className={classes.title}>{project.title}</h1>
-          <span className={classes.subTitle}>subtitle</span>
+          <span className={classes.subTitle}>{project.shortDescription}</span>
         </div>
-        <span className={classes.description}>{project.fullDescription}</span>
+        <div className={classes.text}>
+          {project.fullDescription.map((fragment) => (
+            <span className={classes.description}>{fragment}</span>
+          ))}
+        </div>
       </div>
 
       <Gallery
         primaryImages={project.primaryImages}
         secondaryImages={project.secondaryImages}
+        vertical={project.vertical}
+        last={project.last}
       />
     </div>
   );

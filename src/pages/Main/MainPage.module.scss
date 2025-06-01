@@ -1,13 +1,24 @@
 .pageTitle {
-  margin-top: 70px;
-  // border: 1px solid red;
+  margin-top: 100px;
   padding: 3px;
   font-size: 20px;
+  line-height: 1.5;
+  width: 70%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #d8d8d8;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-top: 70px;
+  }
 }
 
 .pageWrapper {
   width: 100%;
-  margin-top: 60px;
+  // margin-top: 60px;
 }
 
 .cardWrapper {
@@ -29,6 +40,7 @@
 
   &:hover {
     transform: rotate(1deg);
+    color: #ffffffec;
   }
 
   img {
@@ -40,11 +52,16 @@
 
   span {
     font-size: 14px;
-    color: #fff;
+    color: #d8d8d8;
     font-size: 16px;
   }
 
   .line {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #d8d8d8;
+
+    &:hover {
+      transform: rotate(1deg);
+      color: #ffffffec;
+    }
   }
 }
