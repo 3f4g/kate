@@ -10,7 +10,7 @@ export default function ExibitionsPage() {
     const fetchData = async () => {
       try {
         const request = await getExibitions();
-        console.log("запрос");
+
         setData(request);
       } catch (e) {
         console.log(e);

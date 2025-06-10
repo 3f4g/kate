@@ -42,7 +42,7 @@ export default function MainPage() {
             <div
               className={classes.card}
               onClick={() =>
-                navigate("/kate/projects/" + project.id, { state: project })
+                navigate("/projects/" + project.id, { state: project })
               }
             >
               <img

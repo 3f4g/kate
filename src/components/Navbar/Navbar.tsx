@@ -17,16 +17,16 @@ export default function Navbar() {
       />
       <div className={classes.navbar}>
 
-        <div className={classes.logoBlock} onClick={() => navigate('/kate')}>
+        <div className={classes.logoBlock} onClick={() => navigate('/')}>
           <img src={logo} alt="Logo" />
           <span className={classes.name}>Ekaterina Azovskaya</span>
         </div>
 
         <div className={classes.links}>
-          <Link to="/kate" className={classes.link}>
+          <Link to="/" className={classes.link}>
             Projects
           </Link>
-          <Link to="/kate/exibitions" className={classes.link}>
+          <Link to="/exibitions" className={classes.link}>
             Exibitions
           </Link>
           <span className={classes.link} onClick={() => setShowInfoBlock(true)}>
