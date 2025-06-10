@@ -15,9 +15,9 @@ export default function Router() {
           <Navbar />
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-              <Route path="/kate" element={<MainPage />} />
-              <Route path="kate/projects/:id" element={<ProjectPageView />} />
-              <Route path="kate/exibitions" element={<ExibitionsPage />} />
+              <Route path="/" element={<MainPage />} />
+              <Route path="/projects/:id" element={<ProjectPageView />} />
+              <Route path="/exibitions" element={<ExibitionsPage />} />
               <Route path="*" element={<NotFoundRedirect />} />
             </Routes>
           </Suspense>

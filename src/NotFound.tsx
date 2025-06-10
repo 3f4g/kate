@@ -5,7 +5,7 @@ export default function NotFoundRedirect() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/kate");
+    navigate("/");
   }, [navigate]);
 
   return null;
